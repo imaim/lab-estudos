@@ -1,0 +1,28 @@
+# Servidores de Monitoramento
+- name: Alterações Clientes
+  hosts: client
+  ##hosts: lab-ansible
+  ##remote_user: root
+  ##become: yes
+
+  roles:
+    - {role: common }
+    - {role: implant-check-mk}
+    - {role: implant-oracle}
+    #- {role: implant-mssql}
+    - {role: implant-postgres} 
+    - {role: notificacao }
+    #- {role: backup}
+    #- {role: backup_sqlserver}
+    
+# Servidor Master
+- name: Alterações WATO
+  hosts: master
+  #hosts: lab-ansible
+  remote_user: root
+  #become: yes
+
+  roles:
+    #- {role: wato, tags: addcontactgrup,distrimonit,adduser,addpasta,addhost,logar,discovery,aplica}
+    #- {role: wato}
+    #- {role: wato, tags: addpasta,addhost,logar,discovery,aplica}

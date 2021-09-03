@@ -1,0 +1,40 @@
+---
+# <INFO>
+#   ^^^ -> Informações do cliente
+
+# Cliente
+nome_cliente: "<NOME DO CLIENTE>"
+site_name: "<SITE DO CLIENTE>"
+site_user_groups: "<GRUPOS PARA O USUARIO DO SITE>"
+
+ip_dbe: "<IP BANCO DE DADOS>"
+
+hostname_main:
+  - "{{site_name}}-dbprimario"
+
+host_info:
+  - "'{{site_name}}-dbprimario' : '{{ip_dbe}}'"
+
+
+# Sensores de monitoramento
+oracle_sns: "true"
+mssql_sns: "false"
+pssql_sns: "false"
+db2_sns: "false"
+multi_banco: "false"
+
+
+# Configuração Oracle Database
+oracle_ip: "{{ip_dbe}}"
+oracle_asm: "false"
+oracle_flash: "true"
+oracle_bse: "/u01/app/oracle/product"
+oracle_ver: "11.2.0.4"
+oracle_srv: "WINT"
+oracle_app: "dbhome_1"
+oracle_hst: "{{ip_dbe}}"
+oracle_dbe: 
+  - WINT
+oracle_rem:
+  - WINT
+

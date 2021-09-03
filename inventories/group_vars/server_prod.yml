@@ -1,0 +1,34 @@
+#################
+## não alterar ##
+#################
+#########################################################
+## Variáveis de Execução - ORACLE                      ##
+#########################################################
+# Geral - Intala Site
+install_omd_site: "false"
+
+# Geral - Variável cruzada para prod ou mon
+server_monitor: "false"
+server_producao: "true"
+server_standby: "false"
+
+#########################################################
+## Variáveis de Execução - ORACLE                      ##
+#########################################################
+
+# Oracle - Instant Client
+oracle_instant_client: "false"
+
+# Oracle - Habilita configuração do Mk_oracle
+oracle_install_mk_oracle: "true"
+
+# Oracle - Sensor STD
+oracle_standby_sensor: "false"
+
+# Oracle - Backup server
+oracle_backup_server: "true"
+
+# Master
+master_server: "false"
+
+# Apenas para declarar variável não preencher

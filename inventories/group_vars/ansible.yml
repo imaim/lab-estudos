@@ -1,0 +1,35 @@
+---
+## Variaveis de consultas 
+consut_sensor_list: #>
+consut_sensor_integrity: #>
+consut_script_copy: #>
+
+count_script_copy: #>
+count_sensor_integrity: #>
+count_sensor_list: #>
+
+# Variaveis de vault
+# User ti laboratorio     > {{vault_lab_monitor}}
+# User root laboratorio   > {{vault_lab_root}}
+# User imaim Monitor1-ad  > {{vault_serverad_imaim}}
+# User root Monitor1-ad   > {{vault_serverad_root}}
+# User root Cluster-bkp1  > {{vault_serverbkp_root}}
+# User root ansible       > {{vault_ansible_2com}}
+# User 2com ansible       > {{vault_ansible_root}}
+
+ansible_user: 2com
+ansible_ssh_pass: "{{vault_ansible_2com}}"
+ansible_become: true
+ansible_become_method: su
+ansible_become_pass: "{{vault_ansible_root}}"
+
+
+## Diretorios ##
+dir_scripts: "/db/backup/scripts" #>
+dir_sensores: "/usr/lib/check_mk_agent/plugins" #>
+dir_log: "/root/2com_cluster_nuvem/logs"
+log_name: "falha_coleta_copy_nuvem`date +%d-%m-%Y-%H%M%S`.log"
+
+home_nuvem: "/backup1/home/${USR_NUVEM}"
+home_nuvem_list: "/backup1/home/${SSH_USR}"
+ip_server_nuvem: "backup.oracledba.com.br" 
