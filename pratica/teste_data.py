@@ -9,8 +9,7 @@ lista_datas = []
 for arquivo in lista_arquivos:
     # descobrir a data desse arquivo
     if ".tar.z" in arquivo:
-        caminho_arquivo = (f"{caminho}/{arquivo}")
-        data = os.path.getmtime(caminho_arquivo)
+        data = os.path.getmtime(caminho + arquivo)
         lista_datas.append((data, arquivo))
     
     # data inicial = 01/01/2021
