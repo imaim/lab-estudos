@@ -2,7 +2,8 @@ import os
 
 caminho = "/db/backup/backup_old"
 lista_arquivos = os.listdir(caminho)
-
+print(lista_arquivos)
+'''
 lista_datas = []
 for arquivo in lista_arquivos:
     # descobrir a data desse arquivo
@@ -17,3 +18,4 @@ for arquivo in lista_arquivos:
 lista_datas.sort(reverse=True)
 ultimo_arquivo = lista_datas[0]
 print(ultimo_arquivo[1])
+'''
