@@ -5,13 +5,12 @@ import os
 
 caminho = "/db/backup/backup_old"
 lista_arquivos = os.listdir(caminho)
-print(lista_arquivos)
-'''
 lista_datas = []
 for arquivo in lista_arquivos:
     # descobrir a data desse arquivo
     if ".tar.z" in arquivo:
-        data = os.path.getmtime(f"{caminho}/{arquivo}")
+        caminho_arquivo = (f"{caminho}/{arquivo}")
+        data = os.path.getmtime(caminho_arquivo)
         lista_datas.append((data, arquivo))
     
     # data inicial = 01/01/2021
@@ -21,4 +20,4 @@ for arquivo in lista_arquivos:
 lista_datas.sort(reverse=True)
 ultimo_arquivo = lista_datas[0]
 print(ultimo_arquivo[1])
-'''
+
