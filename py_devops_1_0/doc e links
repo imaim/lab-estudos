@@ -3,4 +3,12 @@
 
     PEP-8 :  https://www.python.org/dev/peps/pep-0008/
 
-    
+###### API simples do Deploy
+    https://github.com/robertsilvatech/flask_api_pydevops_simple
+
+    ## habilitando a API
+    Acesso o diretório que efetuou o clone anteriormente.
+    Ative a virtual env
+        source .venv/bin/activate
+    Inicie a API
+        python code/app.py
